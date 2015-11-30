@@ -1,0 +1,6 @@
+[submodule "Aragas.Core"]
+	path = Aragas.Core
+	url = https://github.com/Aragas/Aragas.Core.git
+[submodule "MineLib.Core"]
+	path = MineLib.Core
+	url = https://github.com/MineLib/MineLib.Core.git

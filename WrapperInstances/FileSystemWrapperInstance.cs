@@ -14,19 +14,13 @@ namespace MineLib.PacketBuilder.WrapperInstances
         public IFolder UsersFolder { get; private set; }
         public IFolder LuaFolder { get; private set; }
         public IFolder DatabaseFolder { get; private set; }
+        public IFolder OutputFolder { get; private set; }
 
         public FileSystemWrapperInstance()
         {
             var baseDirectory = FileSystem.Current.GetFolderFromPathAsync(AppDomain.CurrentDomain.BaseDirectory).Result;
 
-            AssemblyFolder = baseDirectory.CreateFolderAsync("Protocols", CreationCollisionOption.OpenIfExists).Result;
-            ContentFolder   = baseDirectory.CreateFolderAsync("Content", CreationCollisionOption.OpenIfExists).Result;
-            SettingsFolder  = baseDirectory.CreateFolderAsync("Settings", CreationCollisionOption.OpenIfExists).Result;
-            LogFolder       = baseDirectory.CreateFolderAsync("Logs", CreationCollisionOption.OpenIfExists).Result;
-
-            UsersFolder = baseDirectory.CreateFolderAsync("Users", CreationCollisionOption.OpenIfExists).Result;
-            LuaFolder = baseDirectory.CreateFolderAsync("Lua", CreationCollisionOption.OpenIfExists).Result;
-            DatabaseFolder = baseDirectory.CreateFolderAsync("Database", CreationCollisionOption.OpenIfExists).Result;
+            OutputFolder = baseDirectory.CreateFolderAsync("Output", CreationCollisionOption.OpenIfExists).Result;
         }
     }
 }
