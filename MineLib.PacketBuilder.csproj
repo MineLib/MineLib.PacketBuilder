@@ -52,7 +52,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Generated.cs" />
     <Compile Include="WikiTable.cs" />
     <Compile Include="ProtobufPacketGenerator.cs" />
     <Compile Include="Program.cs" />
